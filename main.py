@@ -1,7 +1,6 @@
 import csv
 import json
 
-# Блок 1
 animals = [
     ['Животное', 'Среда обитания'],
     ['Медведь', 'Лес',],
@@ -38,8 +37,8 @@ try:
         reader = csv.DictReader(file)
         
         for row in reader:
-            name = row('Имя', '').strip()
-            age_str = row('Возраст', '').strip()
+            name = row['Имя'].strip()
+            age_str = row['Возраст'].strip()
             try:
                 age = int(age_str)
                 if age > 30:
